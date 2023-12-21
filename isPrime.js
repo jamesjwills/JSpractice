@@ -4,7 +4,7 @@ function checkIsPrime(num) {
         return false;
     }
     let i = 2;
-    while (num % i != 0 && i < num) {
+    while (num % i != 0 && i < Math.floor(sqrt(num))) {
         i++;
     }
     if (i === num) {
@@ -15,8 +15,8 @@ function checkIsPrime(num) {
     
     }
 
-    checkIsPrime(2)
+console.log(checkIsPrime(2));
 // returns true
 
-checkIsPrime(4)
+console.log(checkIsPrime(4));
 // returns false
