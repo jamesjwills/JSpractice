@@ -10,10 +10,21 @@ const isStaircaseArray = function(nums) {
         columnLength++;
         let column = [];
 
-        for (let i = 0; i <= columnLength; i++) {
+        for (let i = 0; i < columnLength; i++) {
             column.push(nums.shift());
+            if (nums.length == 0 && i < columnLength - 1) {
+                return false;
+            }
+            
         }
+        staircase.push(column);
 
-        
     }
+    return staircase;
+
 }
+
+console.log(isStaircaseArray([1,2,3,4,5,6]));
+console.log(isStaircaseArray([1,2,3]));
+console.log(isStaircaseArray([1,2,3,4,5]));
+
